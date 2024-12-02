@@ -79,6 +79,8 @@ fn run_puzzle(day: usize, num: usize) {
     println!("# Puzzle {} {}\n", day, num);
 
     PUZZLES[day - 1][num - 1]();
+
+    println!();
 }
 
 fn main() {
