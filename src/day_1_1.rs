@@ -1,7 +1,7 @@
 use std::{fs, iter::zip};
 
 /// https://adventofcode.com/2024/day/1#part1
-pub fn puzzle_1_1() {
+pub fn day_1_1() {
     let data = fs::read_to_string("data/puzzle_1.txt").expect("missing file");
 
     let (mut id_list_a, mut id_list_b): (Vec<_>, Vec<_>) = data

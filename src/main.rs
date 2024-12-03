@@ -1,6 +1,6 @@
-mod puzzle_0_not_implemented;
-mod puzzle_1_1;
-mod puzzle_1_2;
+mod day_1_1;
+mod day_1_2;
+mod day_not_implemented;
 
 use std::env;
 use std::{
@@ -9,36 +9,36 @@ use std::{
 };
 
 use crate::{
-    puzzle_0_not_implemented::puzzle_0_not_implemented, puzzle_1_1::puzzle_1_1,
-    puzzle_1_2::puzzle_1_2,
+    day_1_1::day_1_1, day_1_2::day_1_2,
+    day_not_implemented::day_not_implemented,
 };
 
-const PUZZLES: [[fn(); 2]; 25] = [
-    [puzzle_1_1, puzzle_1_2],
-    [puzzle_0_not_implemented, puzzle_0_not_implemented],
-    [puzzle_0_not_implemented, puzzle_0_not_implemented],
-    [puzzle_0_not_implemented, puzzle_0_not_implemented],
-    [puzzle_0_not_implemented, puzzle_0_not_implemented],
-    [puzzle_0_not_implemented, puzzle_0_not_implemented],
-    [puzzle_0_not_implemented, puzzle_0_not_implemented],
-    [puzzle_0_not_implemented, puzzle_0_not_implemented],
-    [puzzle_0_not_implemented, puzzle_0_not_implemented],
-    [puzzle_0_not_implemented, puzzle_0_not_implemented],
-    [puzzle_0_not_implemented, puzzle_0_not_implemented],
-    [puzzle_0_not_implemented, puzzle_0_not_implemented],
-    [puzzle_0_not_implemented, puzzle_0_not_implemented],
-    [puzzle_0_not_implemented, puzzle_0_not_implemented],
-    [puzzle_0_not_implemented, puzzle_0_not_implemented],
-    [puzzle_0_not_implemented, puzzle_0_not_implemented],
-    [puzzle_0_not_implemented, puzzle_0_not_implemented],
-    [puzzle_0_not_implemented, puzzle_0_not_implemented],
-    [puzzle_0_not_implemented, puzzle_0_not_implemented],
-    [puzzle_0_not_implemented, puzzle_0_not_implemented],
-    [puzzle_0_not_implemented, puzzle_0_not_implemented],
-    [puzzle_0_not_implemented, puzzle_0_not_implemented],
-    [puzzle_0_not_implemented, puzzle_0_not_implemented],
-    [puzzle_0_not_implemented, puzzle_0_not_implemented],
-    [puzzle_0_not_implemented, puzzle_0_not_implemented],
+const DAYS: [[fn(); 2]; 25] = [
+    [day_1_1, day_1_2],
+    [day_not_implemented, day_not_implemented],
+    [day_not_implemented, day_not_implemented],
+    [day_not_implemented, day_not_implemented],
+    [day_not_implemented, day_not_implemented],
+    [day_not_implemented, day_not_implemented],
+    [day_not_implemented, day_not_implemented],
+    [day_not_implemented, day_not_implemented],
+    [day_not_implemented, day_not_implemented],
+    [day_not_implemented, day_not_implemented],
+    [day_not_implemented, day_not_implemented],
+    [day_not_implemented, day_not_implemented],
+    [day_not_implemented, day_not_implemented],
+    [day_not_implemented, day_not_implemented],
+    [day_not_implemented, day_not_implemented],
+    [day_not_implemented, day_not_implemented],
+    [day_not_implemented, day_not_implemented],
+    [day_not_implemented, day_not_implemented],
+    [day_not_implemented, day_not_implemented],
+    [day_not_implemented, day_not_implemented],
+    [day_not_implemented, day_not_implemented],
+    [day_not_implemented, day_not_implemented],
+    [day_not_implemented, day_not_implemented],
+    [day_not_implemented, day_not_implemented],
+    [day_not_implemented, day_not_implemented],
 ];
 
 const EXITS: [&str; 4] = ["exit", "e", "quit", "q"];
@@ -86,10 +86,10 @@ fn get_num_from_str(
     }
 }
 
-fn run_puzzle(day: usize, num: usize) {
-    println!("# Puzzle {} {}\n", day, num);
+fn run_day(day: usize, part: usize) {
+    println!("# Day {} №{}\n", day, part);
 
-    PUZZLES[day - 1][num - 1]();
+    DAYS[day - 1][part - 1]();
 
     println!();
 }
@@ -105,7 +105,7 @@ fn main() {
             let num = get_num_from_str(&args[2], 1..=2);
 
             if let (Some(day), Some(num)) = (day, num) {
-                run_puzzle(day, num);
+                run_day(day, num);
                 return;
             }
         }
@@ -117,18 +117,16 @@ fn main() {
     loop {
         println!("(Q)uit to (e)xit.\n");
 
-        let day = match get_num_from_input("Which day's puzzle (1-25)?", 1..=25)
-        {
+        let day = match get_num_from_input("Which day (1-25)?", 1..=25) {
             Some(day) => day,
             None => break,
         };
 
-        let num = match get_num_from_input("Which puzzle number (1-2)?", 1..=2)
-        {
+        let num = match get_num_from_input("Which part (1-2)?", 1..=2) {
             Some(num) => num,
             None => break,
         };
 
-        run_puzzle(day, num);
+        run_day(day, num);
     }
 }
