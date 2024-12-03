@@ -1,4 +1,6 @@
 mod puzzle_0_not_implemented;
+mod puzzle_1_1;
+mod puzzle_1_2;
 
 use std::env;
 use std::{
@@ -6,10 +8,13 @@ use std::{
     ops::RangeInclusive,
 };
 
-use puzzle_0_not_implemented::puzzle_0_not_implemented;
+use crate::{
+    puzzle_0_not_implemented::puzzle_0_not_implemented, puzzle_1_1::puzzle_1_1,
+    puzzle_1_2::puzzle_1_2,
+};
 
 const PUZZLES: [[fn(); 2]; 25] = [
-    [puzzle_0_not_implemented, puzzle_0_not_implemented],
+    [puzzle_1_1, puzzle_1_2],
     [puzzle_0_not_implemented, puzzle_0_not_implemented],
     [puzzle_0_not_implemented, puzzle_0_not_implemented],
     [puzzle_0_not_implemented, puzzle_0_not_implemented],
@@ -38,7 +43,10 @@ const PUZZLES: [[fn(); 2]; 25] = [
 
 const EXITS: [&str; 4] = ["exit", "e", "quit", "q"];
 
-fn get_num_from_input(prompt: &str, range: RangeInclusive<usize>) -> Option<usize> {
+fn get_num_from_input(
+    prompt: &str,
+    range: RangeInclusive<usize>,
+) -> Option<usize> {
     loop {
         println!("{}", prompt);
         let _ = stdout().flush();
@@ -68,7 +76,10 @@ fn get_num_from_input(prompt: &str, range: RangeInclusive<usize>) -> Option<usiz
     }
 }
 
-fn get_num_from_str(input: &str, range: RangeInclusive<usize>) -> Option<usize> {
+fn get_num_from_str(
+    input: &str,
+    range: RangeInclusive<usize>,
+) -> Option<usize> {
     match input.parse::<usize>() {
         Ok(day) if range.contains(&day) => Some(day),
         _ => None,
@@ -106,12 +117,14 @@ fn main() {
     loop {
         println!("(Q)uit to (e)xit.\n");
 
-        let day = match get_num_from_input("Which day's puzzle (1-25)?", 1..=25) {
+        let day = match get_num_from_input("Which day's puzzle (1-25)?", 1..=25)
+        {
             Some(day) => day,
             None => break,
         };
 
-        let num = match get_num_from_input("Which puzzle number (1-2)?", 1..=2) {
+        let num = match get_num_from_input("Which puzzle number (1-2)?", 1..=2)
+        {
             Some(num) => num,
             None => break,
         };
