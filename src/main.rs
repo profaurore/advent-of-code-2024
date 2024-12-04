@@ -2,6 +2,8 @@ mod day_1_1;
 mod day_1_2;
 mod day_2_1;
 mod day_2_2;
+mod day_3_1;
+mod day_3_2;
 mod day_not_implemented;
 
 use std::env;
@@ -12,13 +14,14 @@ use std::{
 
 use crate::{
     day_1_1::day_1_1, day_1_2::day_1_2, day_2_1::day_2_1, day_2_2::day_2_2,
+    day_3_1::day_3_1, day_3_2::day_3_2,
     day_not_implemented::day_not_implemented,
 };
 
 const DAYS: [[fn(); 2]; 25] = [
     [day_1_1, day_1_2],
     [day_2_1, day_2_2],
-    [day_not_implemented, day_not_implemented],
+    [day_3_1, day_3_2],
     [day_not_implemented, day_not_implemented],
     [day_not_implemented, day_not_implemented],
     [day_not_implemented, day_not_implemented],
