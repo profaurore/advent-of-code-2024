@@ -24,7 +24,7 @@ fn is_update_correct(
         })
 }
 
-/// https://adventofcode.com/2024/day/5#part1
+/// https://adventofcode.com/2024/day/5#part2
 pub fn day_5_2() {
     let data = fs::read_to_string("data/day_5.txt").expect("missing file");
     let mut lines = data.split('\n');
