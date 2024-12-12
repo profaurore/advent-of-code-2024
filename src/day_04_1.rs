@@ -53,8 +53,8 @@ fn needle_matches_for_dir_builder<'a>(
 }
 
 /// https://adventofcode.com/2024/day/4#part1
-pub fn day_4_1() {
-    let data = fs::read_to_string("data/day_4.txt").expect("missing file");
+pub fn day_04_1() {
+    let data = fs::read_to_string("data/day_04.txt").expect("missing file");
     let data_bytes = data.as_bytes();
 
     let num_cols = data.find('\n');

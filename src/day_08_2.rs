@@ -88,8 +88,8 @@ fn unit_position_offset(p1: Position, p2: Position) -> Option<Offset> {
 }
 
 /// https://adventofcode.com/2024/day/8#part2
-pub fn day_8_2() {
-    let data = fs::read_to_string("data/day_8.txt").expect("missing file");
+pub fn day_08_2() {
+    let data = fs::read_to_string("data/day_08.txt").expect("missing file");
 
     let num_cols = data.find('\n').unwrap();
     let num_rows = data.len() / (num_cols + 1);

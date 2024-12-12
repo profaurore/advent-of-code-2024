@@ -3,8 +3,8 @@ use std::fs;
 use regex::Regex;
 
 /// https://adventofcode.com/2024/day/3#part1
-pub fn day_3_1() {
-    let data = fs::read_to_string("data/day_3.txt").expect("missing file");
+pub fn day_03_1() {
+    let data = fs::read_to_string("data/day_03.txt").expect("missing file");
 
     let regex = Regex::new(r"mul\((\d+),(\d+)\)").unwrap();
 

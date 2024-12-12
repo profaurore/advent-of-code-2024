@@ -34,8 +34,8 @@ fn position_non_empty_between(
 }
 
 /// https://adventofcode.com/2024/day/9#part1
-pub fn day_9_1() {
-    let data = fs::read_to_string("data/day_9.txt").expect("missing file");
+pub fn day_09_1() {
+    let data = fs::read_to_string("data/day_09.txt").expect("missing file");
     let bytes = data.as_bytes();
 
     let mut disk: Vec<_> = bytes

@@ -4,8 +4,8 @@ const OPS: [fn(u64, u64) -> u64; 2] =
     [u64::saturating_mul, u64::saturating_add];
 
 /// https://adventofcode.com/2024/day/7#part1
-pub fn day_7_1() {
-    let data = fs::read_to_string("data/day_7.txt").expect("missing file");
+pub fn day_07_1() {
+    let data = fs::read_to_string("data/day_07.txt").expect("missing file");
     let lines = data.split('\n');
 
     let valid_test_values = lines

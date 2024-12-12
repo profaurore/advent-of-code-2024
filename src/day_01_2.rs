@@ -1,8 +1,8 @@
 use std::fs;
 
 /// https://adventofcode.com/2024/day/1#part2
-pub fn day_1_2() {
-    let data = fs::read_to_string("data/day_1.txt").expect("missing file");
+pub fn day_01_2() {
+    let data = fs::read_to_string("data/day_01.txt").expect("missing file");
 
     let (id_list_a, id_list_b): (Vec<_>, Vec<_>) = data
         .split('\n')

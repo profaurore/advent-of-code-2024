@@ -29,8 +29,8 @@ fn position_empty_before_min(
 }
 
 /// https://adventofcode.com/2024/day/9#part2
-pub fn day_9_2() {
-    let data = fs::read_to_string("data/day_9.txt").expect("missing file");
+pub fn day_09_2() {
+    let data = fs::read_to_string("data/day_09.txt").expect("missing file");
     let bytes = data.as_bytes();
 
     let mut disk_files: Vec<_> = bytes

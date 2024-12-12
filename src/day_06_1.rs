@@ -46,8 +46,8 @@ fn get_at_coords_builder<'a>(
 }
 
 /// https://adventofcode.com/2024/day/6#part1
-pub fn day_6_1() {
-    let data = fs::read_to_string("data/day_6.txt").expect("missing file");
+pub fn day_06_1() {
+    let data = fs::read_to_string("data/day_06.txt").expect("missing file");
     let bytes = data.as_bytes();
 
     let mut positions = HashSet::new();

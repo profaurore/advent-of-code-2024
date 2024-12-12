@@ -1,8 +1,8 @@
 use std::fs;
 
 /// https://adventofcode.com/2024/day/2#part2
-pub fn day_2_2() {
-    let data = fs::read_to_string("data/day_2.txt").expect("missing file");
+pub fn day_02_2() {
+    let data = fs::read_to_string("data/day_02.txt").expect("missing file");
 
     let num_safe = data.split('\n').filter(|line| !line.is_empty()).fold(
         0,

@@ -66,8 +66,8 @@ fn needle_matches_at_coords_builder<'a>(
 }
 
 /// https://adventofcode.com/2024/day/4#part2
-pub fn day_4_2() {
-    let data = fs::read_to_string("data/day_4.txt").expect("missing file");
+pub fn day_04_2() {
+    let data = fs::read_to_string("data/day_04.txt").expect("missing file");
     let data_bytes = data.as_bytes();
 
     let num_cols = data.find('\n');

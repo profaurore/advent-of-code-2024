@@ -1,21 +1,21 @@
-mod day_1_1;
-mod day_1_2;
-mod day_2_1;
-mod day_2_2;
-mod day_3_1;
-mod day_3_2;
-mod day_4_1;
-mod day_4_2;
-mod day_5_1;
-mod day_5_2;
-mod day_6_1;
-mod day_6_2;
-mod day_7_1;
-mod day_7_2;
-mod day_8_1;
-mod day_8_2;
-mod day_9_1;
-mod day_9_2;
+mod day_01_1;
+mod day_01_2;
+mod day_02_1;
+mod day_02_2;
+mod day_03_1;
+mod day_03_2;
+mod day_04_1;
+mod day_04_2;
+mod day_05_1;
+mod day_05_2;
+mod day_06_1;
+mod day_06_2;
+mod day_07_1;
+mod day_07_2;
+mod day_08_1;
+mod day_08_2;
+mod day_09_1;
+mod day_09_2;
 mod day_not_implemented;
 
 use std::env;
@@ -25,24 +25,25 @@ use std::{
 };
 
 use crate::{
-    day_1_1::day_1_1, day_1_2::day_1_2, day_2_1::day_2_1, day_2_2::day_2_2,
-    day_3_1::day_3_1, day_3_2::day_3_2, day_4_1::day_4_1, day_4_2::day_4_2,
-    day_5_1::day_5_1, day_5_2::day_5_2, day_6_1::day_6_1, day_6_2::day_6_2,
-    day_7_1::day_7_1, day_7_2::day_7_2, day_8_1::day_8_1, day_8_2::day_8_2,
-    day_9_1::day_9_1, day_9_2::day_9_2,
+    day_01_1::day_01_1, day_01_2::day_01_2, day_02_1::day_02_1,
+    day_02_2::day_02_2, day_03_1::day_03_1, day_03_2::day_03_2,
+    day_04_1::day_04_1, day_04_2::day_04_2, day_05_1::day_05_1,
+    day_05_2::day_05_2, day_06_1::day_06_1, day_06_2::day_06_2,
+    day_07_1::day_07_1, day_07_2::day_07_2, day_08_1::day_08_1,
+    day_08_2::day_08_2, day_09_1::day_09_1, day_09_2::day_09_2,
     day_not_implemented::day_not_implemented,
 };
 
 const DAYS: [[fn(); 2]; 25] = [
-    [day_1_1, day_1_2],
-    [day_2_1, day_2_2],
-    [day_3_1, day_3_2],
-    [day_4_1, day_4_2],
-    [day_5_1, day_5_2],
-    [day_6_1, day_6_2],
-    [day_7_1, day_7_2],
-    [day_8_1, day_8_2],
-    [day_9_1, day_9_2],
+    [day_01_1, day_01_2],
+    [day_02_1, day_02_2],
+    [day_03_1, day_03_2],
+    [day_04_1, day_04_2],
+    [day_05_1, day_05_2],
+    [day_06_1, day_06_2],
+    [day_07_1, day_07_2],
+    [day_08_1, day_08_2],
+    [day_09_1, day_09_2],
     [day_not_implemented, day_not_implemented],
     [day_not_implemented, day_not_implemented],
     [day_not_implemented, day_not_implemented],

@@ -103,8 +103,8 @@ fn test_infinite_loop<'a>(
 }
 
 /// https://adventofcode.com/2024/day/6#part2
-pub fn day_6_2() {
-    let data = fs::read_to_string("data/day_6.txt").expect("missing file");
+pub fn day_06_2() {
+    let data = fs::read_to_string("data/day_06.txt").expect("missing file");
     let bytes = data.as_bytes();
 
     let mut loop_possibilities = HashSet::new();
