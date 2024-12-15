@@ -185,7 +185,6 @@ fn cell_fences(r: usize, c: usize, regions: &[Vec<i32>]) -> PerimeterSet {
     fences
 }
 
-// 909564
 /// https://adventofcode.com/2024/day/12#part2
 pub fn day_12_2() {
     let data = fs::read_to_string("data/day_12.txt").expect("missing file");
