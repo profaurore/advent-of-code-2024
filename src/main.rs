@@ -32,6 +32,8 @@ mod day_16_1;
 mod day_16_2;
 mod day_17_1;
 mod day_17_2;
+mod day_18_1;
+mod day_18_2;
 mod day_not_implemented;
 
 use std::env;
@@ -52,7 +54,8 @@ use crate::{
     day_13_1::day_13_1, day_13_2::day_13_2, day_14_1::day_14_1,
     day_14_2::day_14_2, day_15_1::day_15_1, day_15_2::day_15_2,
     day_16_1::day_16_1, day_16_2::day_16_2, day_17_1::day_17_1,
-    day_17_2::day_17_2, day_not_implemented::day_not_implemented,
+    day_17_2::day_17_2, day_18_1::day_18_1, day_18_2::day_18_2,
+    day_not_implemented::day_not_implemented,
 };
 
 const DAYS: [[fn(); 2]; 25] = [
@@ -73,7 +76,7 @@ const DAYS: [[fn(); 2]; 25] = [
     [day_15_1, day_15_2],
     [day_16_1, day_16_2],
     [day_17_1, day_17_2],
-    [day_not_implemented, day_not_implemented],
+    [day_18_1, day_18_2],
     [day_not_implemented, day_not_implemented],
     [day_not_implemented, day_not_implemented],
     [day_not_implemented, day_not_implemented],
